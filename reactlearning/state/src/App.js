@@ -16,7 +16,7 @@ export default () => {
 //     })
 //     export default () => {
 //         const [count, setCount] = useState(() => countInitial()) //it will run only the very first component renders, one time
-//     function decrementCount() {
+    function decrementCount() {
         return setCount((prevState) => prevState - 1);
     }
 
