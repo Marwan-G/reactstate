@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  awscli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #to force the container to stay alive 
+    stdin_open: true # equivalent of -i
+    tty: true        # equivalent of -t
+    entrypoint: tail -f /dev/null
+    volumes:
+      - /Users/marwanghubein/workspace:/workspace
+      - /Users/marwanghubein/.ssh/technosole/id_rsa_techno:/root/.ssh/id_rsa
+
+
+    # volumes:
+    #      workspace:
+    #        driver_opts:
+    #         type: none
+    #         device: /Users/marwanghubein/workspace
+    #  ssh:
+    #    driver_opts:
+    #     type: none
+    #     device: /Users/marwanghubein/.ssh/technosole/technosole
